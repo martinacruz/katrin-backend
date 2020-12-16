@@ -4,12 +4,15 @@
 const db = require('../models');
 
 const index = (req, res) => {
+    console.log('inside index')
     db.event.findAll().then((foundEvents) => {
         if (!foundEvents) return res.json({
             message: 'No scheduled events.'
+            
         })
 
-        res.json({ events: foundEvents})
+        console.log(foundEvents)
+        res.json({ events: foundEvents })
     })
         .catch(err => console.log("Error at event#index", err))
 }
@@ -20,7 +23,7 @@ const show = (req, res) => {
             message: 'Event with provided ID not found.'
         })
 
-        res.send('Incomplete event#show controller function')
+        res.json({ event: foundEvents })
     })
         .catch(err => console.log("Error at event#index", err))
 }
@@ -28,9 +31,7 @@ const show = (req, res) => {
 const create = (req, res) => {
     db.event.create(req.body).then((createdEvent) => {
 
-        // validations?
-
-        res.send('Incomplete event#create controller function')
+        res.json({ event: createdEvent })
     })
         .catch(err => console.log("Error at event#index", err))
 }
@@ -43,7 +44,7 @@ const update = (req, res) => {
         }
     }).then((updatedEvent) => {
         // Validations and error handling here
-        res.send('Incomplete event#update controller function')
+        res.json({ event: updatedEvent})
     })
         .catch(err => console.log("Error at event#index", err))
 }
@@ -53,7 +54,7 @@ const destroy = (req, res) => {
     db.event.destroy({
         where: { id: req.params.id }
     }).then(() => {
-        res.send('Incomplete event#delete controller function')
+        res.json({ message: `Event with id ${req.params.id} has been deleted`})
     })
         .catch(err => console.log("Error at event#index", err))
 }

@@ -10,4 +10,4 @@ router.put('/:id', ctrl.event.update)
 router.delete('/:id', ctrl.event.destroy)
 
 // export
-module.export = router;
+module.exports = router;
