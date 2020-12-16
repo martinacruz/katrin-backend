@@ -1,0 +1,22 @@
+{
+    "events": [
+        {
+            "name": "A La Vuelta Shop Opening",
+            "date": "2020-12-12",
+            "location": "Barrio Logan",
+            "time": 12,
+            "description": "This is an event for blah blah blah",
+            "createdAt": "09/11/2020",
+            "updatedAt": "09/11/2020"
+        },
+        {
+            "name": "Chicano Park Day",
+            "date": "2020-12-12",
+            "location": "Barrio Logan",
+            "time": 12,
+            "description": "This is an event for blah blah blah",
+            "createdAt": "09/11/2020",
+            "updatedAt": "09/11/2020"
+        }
+    ]
+}

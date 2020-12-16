@@ -1,3 +1,6 @@
+const event = require('./event');
+
 module.exports = {
-    auth: require('./auth')
+    auth: require('./auth'),
+    event: require('./event')
 }

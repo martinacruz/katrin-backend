@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.user.hasMany(models.event)
     }
     validPassword(passwordTyped) {
       return bcrypt.compareSync(passwordTyped, this.password);
