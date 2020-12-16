@@ -1,6 +1,7 @@
 {
     "events": [
         {
+            "userId": 1,
             "name": "A La Vuelta Shop Opening",
             "date": "2020-12-12",
             "location": "Barrio Logan",
@@ -10,6 +11,7 @@
             "updatedAt": "09/11/2020"
         },
         {
+            "userId": 1,
             "name": "Chicano Park Day",
             "date": "2020-12-12",
             "location": "Barrio Logan",

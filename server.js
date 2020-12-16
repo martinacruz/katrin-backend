@@ -13,7 +13,6 @@ const app = express()
 
 // middleware - server logging
 app.use(morgan('dev'))
-app.use(cors())
 
 // middleware - JSON parsing
 app.use(express.json())
@@ -45,7 +44,7 @@ app.use(passport.session())
 
 // middleware - API routes
 app.use('/api/v1/auth', routes.auth)
-app.use('/api/v1/admin', routes.admin)
+app.use('/api/v1/event', routes.event)
 
 // connection
 app.listen(port, () => console.log(`Server is running on port ${port}`))

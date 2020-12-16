@@ -1,4 +1,4 @@
 module.exports = {
     auth: require('./auth'),
-    admin: require('./admin')
+    event: require('./event')
 }
