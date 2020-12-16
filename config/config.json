@@ -1,6 +1,6 @@
 {
   "development": {
-    "database": "DB NAME HERE",
+    "database": "mariscos_el_katrin",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
