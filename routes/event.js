@@ -4,9 +4,8 @@ const ctrl = require('../controllers');
 
 // routes
 router.get('/:userId', ctrl.event.index)
-//router.get('/:id', ctrl.event.show)
 router.post('/', ctrl.event.create)
-//router.put('/:id', ctrl.event.update)
+router.put('/:userId/:id', ctrl.event.update)
 router.delete('/:userId/:id', ctrl.event.destroy)
 
 // export

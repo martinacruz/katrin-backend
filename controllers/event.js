@@ -19,27 +19,14 @@ const index = (req, res) => {
         .catch(err => console.log("Error at event#index", err))
 }
 
-// const show = (req, res) => {
-//     db.event.findByPk(req.params.id).then((foundEvents) => {
-//         if (!foundEvents) return res.json({
-//             message: 'Event with provided ID not found.'
-//         })
-
-//         res.json({ event: foundEvents })
-//     })
-//         .catch(err => console.log("Error at event#show", err))
-// }
-
 const create = (req, res) => {
     db.event.create({
-        //where: {
             userId: req.user.id,
             name: req.body.name,
             date: req.body.date,
             location: req.body.location,
             time: req.body.time,
             description: req.body.description,
-        //}
     }).then((createdEvent) => {
         res.json({ createdEvent, message: "New event created" })
     })
@@ -50,16 +37,16 @@ const update = (req, res) => {
     // make the update route
     db.event.update(req.body, {
         where: {
-            id: req.params.id
+            id: req.body.id
         }
     }).then((updatedEvent) => {
         // Validations and error handling here
-        res.json({ event: updatedEvent})
+        res.json({ updatedEvent, message:"Your event has been updated"})
     })
         .catch(err => console.log("Error at event#index", err))
 }
 
-//not sure
+
 const destroy = (req, res) => {
     db.event.findOne({
         where: { 
@@ -74,8 +61,7 @@ const destroy = (req, res) => {
 
 module.exports = {
     index,
-    //show,
     create,
-    //update,
+    update,
     destroy,
 };
