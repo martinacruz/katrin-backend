@@ -61,14 +61,14 @@ const create = (req, res) => {
 
 //not sure
 const destroy = (req, res) => {
-    db.event.destroy({
+    db.event.findOne({
         where: { 
-            userId: req.params.userId 
+            id: req.params.id 
         }
-    }).then(() => {
-        res.json({ message: `Event with id ${req.params.id} has been deleted`})
+    }).then((foundEvent) => {
+        console.log(foundEvent)
+        foundEvent.destroy().then(() => res.sendStatus(200));
     })
-        .catch(err => console.log("Error at event#index", err))
 }
 
 

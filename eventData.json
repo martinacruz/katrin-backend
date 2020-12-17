@@ -19,6 +19,66 @@
             "description": "This is an event for blah blah blah",
             "createdAt": "09/11/2020",
             "updatedAt": "09/11/2020"
+        },
+        {
+            "userId": 1,
+            "name": "event",
+            "date": "2020-12-12",
+            "location": "Barrio Logan",
+            "time": 12,
+            "description": "This is an event for blah blah blah",
+            "createdAt": "09/11/2020",
+            "updatedAt": "09/11/2020"
+        },
+        {
+            "userId": 1,
+            "name": "event 1",
+            "date": "2020-12-12",
+            "location": "Barrio Logan",
+            "time": 12,
+            "description": "This is an event for blah blah blah",
+            "createdAt": "09/11/2020",
+            "updatedAt": "09/11/2020"
+        },
+        {
+            "userId": 1,
+            "name": "event 2",
+            "date": "2020-12-12",
+            "location": "Barrio Logan",
+            "time": 12,
+            "description": "This is an event for blah blah blah",
+            "createdAt": "09/11/2020",
+            "updatedAt": "09/11/2020"
+        },
+        {
+            "userId": 1,
+            "name": "event 3",
+            "date": "2020-12-12",
+            "location": "Barrio Logan",
+            "time": 12,
+            "description": "This is an event for blah blah blah",
+            "createdAt": "09/11/2020",
+            "updatedAt": "09/11/2020"
+        },
+        {
+            "userId": 1,
+            "name": "event 4",
+            "date": "2020-12-12",
+            "location": "Barrio Logan",
+            "time": 12,
+            "description": "This is an event for blah blah blah",
+            "createdAt": "09/11/2020",
+            "updatedAt": "09/11/2020"
+        },
+        {
+            "userId": 1,
+            "name": "event 5",
+            "date": "2020-12-12",
+            "location": "Barrio Logan",
+            "time": 12,
+            "description": "This is an event for blah blah blah",
+            "createdAt": "09/11/2020",
+            "updatedAt": "09/11/2020"
         }
     ]
 }
