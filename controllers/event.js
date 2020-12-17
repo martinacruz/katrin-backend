@@ -32,32 +32,32 @@ const index = (req, res) => {
 
 const create = (req, res) => {
     db.event.create({
-        where: {
-            userId: req.body.userId,
+        //where: {
+            userId: req.user.id,
             name: req.body.name,
             date: req.body.date,
             location: req.body.location,
             time: req.body.time,
             description: req.body.description,
-        }
+        //}
     }).then((createdEvent) => {
         res.json({ createdEvent, message: "New event created" })
     })
         .catch(err => console.log("Error at event#create", err))
 }
 
-// const update = (req, res) => {
-//     // make the update route
-//     db.event.update(req.body, {
-//         where: {
-//             id: req.params.id
-//         }
-//     }).then((updatedEvent) => {
-//         // Validations and error handling here
-//         res.json({ event: updatedEvent})
-//     })
-//         .catch(err => console.log("Error at event#index", err))
-// }
+const update = (req, res) => {
+    // make the update route
+    db.event.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    }).then((updatedEvent) => {
+        // Validations and error handling here
+        res.json({ event: updatedEvent})
+    })
+        .catch(err => console.log("Error at event#index", err))
+}
 
 //not sure
 const destroy = (req, res) => {
